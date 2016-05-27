@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?attr/actionBarSize"
+    android:background="@color/Black"
+    local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="5">
+
+
+        <TextView
+            android:id="@+id/txt_titleTV"
+            android:textColor="@color/White"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:layout_weight="5"
+            android:textStyle="bold" />
+
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/imgv_top_right_drawer"
+            android:layout_width="15dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:visibility="invisible" />
+
+        
+    </LinearLayout>
+
+
+</android.support.v7.widget.Toolbar>

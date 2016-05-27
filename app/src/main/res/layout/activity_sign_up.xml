@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    android:background = "@mipmap/background">
+
+    <ScrollView
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent">
+
+        <LinearLayout
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:orientation = "vertical">
+
+
+            <ImageView
+                android:layout_width = "200dp"
+                android:layout_height = "wrap_content"
+                android:layout_gravity = "center|bottom"
+                android:layout_margin = "10dp"
+                android:src = "@mipmap/logo"/>
+
+
+            <EditText
+                android:id = "@+id/edtv_fullname"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:ems = "10"
+                android:gravity = "center"
+                android:hint = "Full Name"
+                android:inputType = "textCapCharacters"
+                android:maxLength = "15"
+                android:textCursorDrawable = "@null"
+                android:theme = "@style/EditTextCustom"/>
+
+            <EditText
+                android:id = "@+id/edtv_email"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_marginTop = "10dp"
+                android:ems = "10"
+                android:gravity = "center"
+                android:hint = "Email"
+                android:inputType = "textCapCharacters"
+                android:maxLength = "15"
+                android:textCursorDrawable = "@null"
+                android:theme = "@style/EditTextCustom"/>
+
+
+            <EditText
+                android:id = "@+id/edtv_password"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_marginTop = "10dp"
+                android:ems = "10"
+                android:gravity = "center"
+                android:hint = "Password"
+                android:inputType = "textPassword"
+                android:maxLength = "15"
+                android:textCursorDrawable = "@null"
+                android:theme = "@style/EditTextCustom"/>
+
+
+            <EditText
+                android:id = "@+id/edtv_confirmpassword"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_marginTop = "10dp"
+                android:layout_marginBottom="25dp"
+                android:ems = "10"
+                android:gravity = "center"
+                android:hint = "Confirm Password"
+                android:inputType = "textPassword"
+                android:maxLength = "15"
+                android:textCursorDrawable = "@null"
+                android:theme = "@style/EditTextCustom"/>
+
+            <LinearLayout
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_margin = "20dp"
+                android:gravity = "center"
+                android:orientation = "vertical">
+
+
+                <TextView
+                    android:id = "@+id/txtv_sign_in"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "50dp"
+                    android:layout_gravity = "center"
+                    android:background = "@drawable/red_round_corner_selector"
+                    android:clickable = "true"
+                    android:gravity = "center"
+                    android:text = "Sign Up"
+                    android:textColor = "@color/White"
+                    android:textSize = "16sp"
+                    android:textStyle = "bold"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
