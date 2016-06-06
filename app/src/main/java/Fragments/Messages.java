@@ -25,15 +25,20 @@ public class Messages extends Fragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        View v = inflater.inflate(R.layout.fragment_messages, container, false);
+        View view = inflater.inflate(R.layout.fragment_messages, container, false);
 
         con=getActivity();
 
-        listv_messages = (ListView) v.findViewById(R.id.listv_messages);
 
+        setUpIds(view);
         setData();
 
-        return v;
+        return view;
+    }
+
+    private void setUpIds(View view)
+    {
+        listv_messages = (ListView) view.findViewById(R.id.listv_messages);
     }
 
     private void setData()

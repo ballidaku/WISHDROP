@@ -87,7 +87,7 @@
 
 
                 <TextView
-                    android:id = "@+id/txtv_sign_in"
+                    android:id = "@+id/txtv_signup"
                     android:layout_width = "match_parent"
                     android:layout_height = "50dp"
                     android:layout_gravity = "center"
@@ -99,6 +99,35 @@
                     android:textSize = "16sp"
                     android:textStyle = "bold"/>
 
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_marginTop = "10dp"
+                android:gravity = "center"
+                android:orientation = "horizontal">
+
+
+                <TextView
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "40dp"
+                    android:gravity = "center"
+                    android:text = "Don't have an account?  "
+                    android:textColor = "@color/White"
+                    android:textSize = "16sp"
+                    android:textStyle = "bold"/>
+
+                <TextView
+                    android:id="@+id/txtv_signin"
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "40dp"
+                    android:gravity = "center"
+                    android:text = "Sign In"
+                    android:textColor = "@color/Red"
+                    android:textSize = "16sp"
+                    android:textStyle = "bold"/>
 
             </LinearLayout>
 

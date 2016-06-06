@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name = "colorPrimary">#3F51B5</color>
-    <color name = "colorPrimaryDark">#303F9F</color>
+    <color name = "colorPrimary">#FF2B57</color>
+    <color name = "colorPrimaryDark">#BA1A13</color>
     <color name = "colorAccent">#FF4081</color>
+    <color name="navigationBarColor">#000000</color>
 
 
     <color name = "White">#ffffff</color>
@@ -10,4 +11,11 @@
     <color name = "RedSelected">#BA1A13</color>
     <color name = "Black">#000000</color>
     <color name = "Row_Back">#4efdfdfd</color>
+    <color name = "Gray_backgroundfb">#DCDEE3</color>
+
+    <color name = "TextHeading">#FF4F4F4F</color>
+    <color name = "TextValue">#FFA4A4A4</color>
+
+
+
 </resources>

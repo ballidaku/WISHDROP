@@ -12,8 +12,26 @@
     <style name = "AppTheme.NoActionBar">
         <item name = "windowActionBar">false</item>
         <item name = "windowNoTitle">true</item>
-
     </style>
+
+
+    <style name="NavigationTab" parent="Widget.Design.TabLayout">
+        <!--<item name="tabBackground">@drawable/background_tab</item>
+        <item name="tabSelectedTextColor">@color/primary_light</item>
+        <item name="tabIndicatorColor">@color/blue</item>-->
+        <item name="tabTextAppearance">@style/NavigationTabTextAppeareance</item>
+    </style>
+
+    <style name="NavigationTabTextAppeareance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">16sp</item>
+        <!--<item name="android:textStyle">bold</item>-->
+    </style>
+
+
+
+
+
+
 
 
     <style name = "EditTextCustom" parent = "AppTheme.NoActionBar">
@@ -27,6 +45,16 @@
 
         <!-- <item name="colorAccent">@color/White</item>
          <item name="colorControlNormal">@color/White</item>-->
+
+    </style>
+
+
+
+    <style name = "EditTextCustom2" parent="@android:style/Widget.EditText">
+        <item name = "android:background">@android:color/transparent</item>
+        <item name = "android:textColor">@color/TextHeading</item>
+        <item name = "android:padding">10dp</item>
+        <item name = "android:textSize">16sp</item>
 
     </style>
 

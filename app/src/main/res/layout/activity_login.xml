@@ -137,13 +137,13 @@
                     android:layout_height = "70dp"
                     android:src = "@mipmap/ic_fb"/>
 
-                <TextView
+                <!--<TextView
                     android:layout_width = "match_parent"
                     android:layout_height = "wrap_content"
                     android:gravity = "center"
                     android:text = "Facebook"
                     android:textColor = "@color/White"
-                    android:textSize = "18sp"/>
+                    android:textSize = "18sp"/>-->
 
                 <LinearLayout
                     android:layout_width = "match_parent"

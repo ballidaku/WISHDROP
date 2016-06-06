@@ -8,6 +8,8 @@
         android:id = "@+id/listv_messages"
         android:layout_width = "match_parent"
         android:layout_height = "wrap_content"
+        android:divider="@drawable/divider"
+        android:dividerHeight="1dp"
         android:scrollbarStyle = "outsideOverlay"/>
 
 </FrameLayout>

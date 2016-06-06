@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+              android:layout_width = "wrap_content"
+              android:layout_height = "wrap_content"
+              android:background = "@drawable/abc"
+              android:orientation = "vertical"
+              android:paddingBottom = "10dp"
+              android:paddingLeft = "5dp"
+              android:paddingRight = "5dp"
+              android:paddingTop = "5dp">
+
+    <LinearLayout android:layout_width = "260dp"
+                  android:layout_height = "wrap_content"
+                  android:orientation = "horizontal">
+
+        <ImageView
+            android:layout_width = "50dp"
+            android:layout_height = "50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="5dp"
+            android:src = "@mipmap/profile_pic"/>
+
+        <LinearLayout android:layout_width = "match_parent"
+                      android:layout_height = "wrap_content"
+                      android:orientation = "vertical"
+                      android:padding = "3dp">
+
+            <TextView
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:text = "Elizabeth"
+                android:textColor = "@color/Red"
+                android:textSize = "16sp"/>
+
+            <TextView
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_marginTop = "5dp"
+                android:text = "I wish a lunch with my bestie at las  vegas.."
+                android:textColor = "@color/White"/>
+
+            <LinearLayout
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_marginTop = "3dp"
+                android:orientation = "horizontal">
+
+                <TextView
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:text = "Category : "
+                    android:textColor = "@color/White"/>
+
+
+                <TextView
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:text = "LOVE"
+                    android:textColor = "@color/Red"/>
+
+                <TextView
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:gravity = "right"
+                    android:text = "10:30pm"
+                    android:textColor = "@color/White"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width = "match_parent"
+        android:layout_height = "1dp"
+        android:layout_marginTop = "5dp"
+        android:background = "@color/Red"/>
+
+    <LinearLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "30dp"
+        android:orientation = "horizontal">
+
+
+        <LinearLayout
+            android:layout_width = "0dp"
+            android:layout_height = "match_parent"
+            android:layout_weight = "1"
+            android:gravity="center"
+            android:orientation = "horizontal">
+
+            <ImageView
+                android:layout_width = "20dp"
+                android:layout_height = "20dp"
+                android:src = "@mipmap/ic_comment"/>
+
+            <TextView
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                android:drawablePadding = "10dp"
+                android:padding = "5dp"
+                android:gravity="center"
+                android:text = "Comments(10)"
+                android:textColor = "@color/White"
+                android:textSize = "14sp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width = "1dp"
+            android:layout_height = "match_parent"
+            android:background = "@color/Red"/>
+
+
+        <LinearLayout
+            android:layout_width = "0dp"
+            android:layout_height = "match_parent"
+            android:layout_weight = "1"
+            android:gravity="center"
+            android:orientation = "horizontal">
+
+            <ImageView
+                android:layout_width = "20dp"
+                android:layout_height = "20dp"
+                android:layout_marginLeft="10dp"
+                android:src = "@mipmap/ic_liked"/>
+
+            <TextView
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                android:drawablePadding = "10dp"
+                android:gravity="center"
+                android:padding = "5dp"
+                android:text = "Like(10)"
+                android:textColor = "@color/White"
+                android:textSize = "14sp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

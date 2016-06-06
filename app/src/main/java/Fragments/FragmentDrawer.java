@@ -16,6 +16,7 @@ import com.example.sharan.wishdrop.R;
 
 import org.json.JSONException;
 
+import HelperClasses.MyUtil;
 
 /**
  Created by ameba on 9/24/15. */
@@ -25,10 +26,10 @@ public class FragmentDrawer extends Fragment
     private ActionBarDrawerToggle mDrawerToggle;
     private DrawerLayout          mDrawerLayout;
     private View                  containerView;
-    ImageView         imgv_profile;
-    TextView          txtv_username;
-    Context           con;
-
+    ImageView imgv_profile;
+    TextView txtv_username;
+    Context  con;
+    MyUtil myUtil = new MyUtil();
 
     public FragmentDrawer()
     {
@@ -45,19 +46,18 @@ public class FragmentDrawer extends Fragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        // Inflating view layout
+
+        con = getActivity();
+
         View layout = inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
 
         imgv_profile = (ImageView) layout.findViewById(R.id.imgv_profile);
         txtv_username = (TextView) layout.findViewById(R.id.txtv_username);
-        con = getActivity();
+
+
 
         return layout;
     }
-
-
-
-
 
     public void setUp(int fragmentId, DrawerLayout drawerLayout, final Toolbar toolbar)
     {
@@ -67,7 +67,7 @@ public class FragmentDrawer extends Fragment
 
         int                       width  = (getResources().getDisplayMetrics().widthPixels / 2);
         DrawerLayout.LayoutParams params = (DrawerLayout.LayoutParams) containerView.getLayoutParams();
-        params.width = width;
+        params.width = width ;
         containerView.setLayoutParams(params);
 
         mDrawerToggle = new ActionBarDrawerToggle(getActivity(), drawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close)

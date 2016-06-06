@@ -1,6 +1,7 @@
 package com.example.sharan.wishdrop;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -10,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -20,11 +22,12 @@ import Adapters.DrawerList_Adapter;
 import Fragments.AboutUs;
 import Fragments.FragmentDrawer;
 import Fragments.Friends;
+import Fragments.Home;
 import Fragments.InviteFriends;
 import Fragments.Messages;
-import Fragments.MyWishes;
+import Fragments.Profile;
+import Fragments.WishList;
 import Fragments.Settings;
-import Fragments.ShareApp;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener
 {
@@ -38,10 +41,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     DrawerList_Adapter drawer_adapter;
     Context            con;
     TextView           txt_titleTV;
-    ImageView          imgv_profile;
+    ImageView          imgv_top_right_drawer;
+    FrameLayout        frame_layout_profile;
     Fragment           fragment;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -53,24 +55,45 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         con = this;
         //constant.ChangeStatusColor(this,R.color.Black);
 
+        setUpIds();
+        prepareListData();
+
+    }
+
+    private void setUpIds()
+    {
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
 
         txt_titleTV = (TextView) mToolbar.findViewById(R.id.txt_titleTV);
+        (imgv_top_right_drawer = (ImageView) mToolbar.findViewById(R.id.imgv_top_right_drawer)).setOnClickListener(this);
 
         listv_drawer = (ListView) findViewById(R.id.listv_drawer);
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 
-        imgv_profile = (ImageView) findViewById(R.id.imgv_profile);
-        imgv_profile.setOnClickListener(this);
-
-        prepareListData();
+        frame_layout_profile = (FrameLayout) findViewById(R.id.frame_layout_profile);
+        frame_layout_profile.setOnClickListener(this);
 
         drawerFragment = (FragmentDrawer) getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
         drawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), mToolbar);
+    }
 
-        drawer_adapter = new DrawerList_Adapter(con, listDataHeader,0);
+    private void prepareListData()
+    {
+        listDataHeader = new ArrayList<>();
+
+        listDataHeader.add("Home");
+        listDataHeader.add("Wish List");
+        listDataHeader.add("Friends");
+        listDataHeader.add("Messages");
+        listDataHeader.add("Settings");
+        listDataHeader.add("About us");
+        listDataHeader.add("Invite Friends");
+        listDataHeader.add("Share App");
+
+
+        drawer_adapter = new DrawerList_Adapter(con, listDataHeader, 0);
         listv_drawer.setAdapter(drawer_adapter);
 
         listv_drawer.setOnItemClickListener(new AdapterView.OnItemClickListener()
@@ -89,64 +112,78 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    private void prepareListData()
-    {
-        listDataHeader = new ArrayList<>();
-
-        listDataHeader.add("My Wishes");
-        listDataHeader.add("Friends");
-        listDataHeader.add("Messages");
-        listDataHeader.add("Settings");
-        listDataHeader.add("About us");
-        listDataHeader.add("Invite Friends");
-        listDataHeader.add("Share App");
-
-    }
-
     public void displayView(int groupPosition)
     {
 
+        txt_titleTV.setText(listDataHeader.get(groupPosition));
+        imgv_top_right_drawer.setVisibility(View.INVISIBLE);
         switch (groupPosition)
         {
+
             case 0:
-                txt_titleTV.setText(listDataHeader.get(groupPosition));
-                fragment = new MyWishes();
+                fragment = new Home();
+                imgv_top_right_drawer.setVisibility(View.VISIBLE);
                 break;
 
             case 1:
-                txt_titleTV.setText(listDataHeader.get(groupPosition));
-                fragment = new Friends();
+                fragment = new WishList();
                 break;
 
             case 2:
-                txt_titleTV.setText(listDataHeader.get(groupPosition));
-                fragment = new Messages();
+                fragment = new Friends();
                 break;
 
             case 3:
-                txt_titleTV.setText(listDataHeader.get(groupPosition));
-                fragment = new Settings();
+                fragment = new Messages();
                 break;
 
             case 4:
-                txt_titleTV.setText(listDataHeader.get(groupPosition));
-                fragment = new AboutUs();
+                fragment = new Settings();
                 break;
 
             case 5:
-                txt_titleTV.setText(listDataHeader.get(groupPosition));
-                fragment = new InviteFriends();
+                fragment = new AboutUs();
                 break;
 
             case 6:
-                txt_titleTV.setText(listDataHeader.get(groupPosition));
-                fragment = new ShareApp();
+                fragment = new InviteFriends();
+
+                break;
+
+            case 7:
+                mDrawerLayout.closeDrawers();
+                callShare();
+
+                //                fragment = new ShareApp();
                 break;
 
             default:
                 break;
         }
 
+        if (groupPosition != 7)
+        {
+            changeFragment(fragment);
+        }
+
+    }
+
+    private void callShare()
+    {
+        Intent share = new Intent(android.content.Intent.ACTION_SEND);
+        share.setType("text/plain");
+        share.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+
+        // Add data to the intent, the receiving app will decide
+        // what to do with it.
+        share.putExtra(Intent.EXTRA_SUBJECT, "Title Of The Post");
+        share.putExtra(Intent.EXTRA_TEXT, "http://www.codeofaninja.com");
+
+        startActivity(Intent.createChooser(share, "Share link!"));
+    }
+
+    private void changeFragment(Fragment fragment)
+    {
         if (fragment != null)
         {
             FragmentManager     fragmentManager     = getSupportFragmentManager();
@@ -162,10 +199,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     {
         switch (v.getId())
         {
-            case R.id.imgv_profile:
+            case R.id.frame_layout_profile:
 
-                //                openProfile();
+                txt_titleTV.setText("Profile");
+                fragment = new Profile();
+                changeFragment(fragment);
 
+                break;
+
+            case R.id.imgv_top_right_drawer:
+
+                startActivity(new Intent(con, AddWish.class));
                 break;
 
             default:

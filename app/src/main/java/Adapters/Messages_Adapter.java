@@ -2,15 +2,14 @@ package Adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.example.sharan.wishdrop.R;
+
+import com.example.sharan.wishdrop.Chat.Chat_Activity;
 
 /**
  Created by sharan on 27/5/16. */
@@ -64,6 +63,15 @@ public class Messages_Adapter extends BaseAdapter
         TextView txtv_profession  = (TextView) row.findViewById(R.id.txtv_profession);
         TextView txtv_address     = (TextView) row.findViewById(R.id.txtv_address);
         TextView txtv_description = (TextView) row.findViewById(R.id.txtv_description);*/
+
+
+        row.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                con.startActivity(new Intent(con, Chat_Activity.class));
+            }
+        });
 
 
         return row;
