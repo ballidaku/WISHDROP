@@ -12,9 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.sharan.wishdrop.R;
-
-import org.json.JSONException;
+import com.ameba.sharan.wishdrop.R;
 
 import HelperClasses.MyUtil;
 

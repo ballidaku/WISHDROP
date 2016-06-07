@@ -133,17 +133,17 @@
                 </LinearLayout>
 
                 <ImageView
+                    android:id="@+id/imgv_facebook"
                     android:layout_width = "70dp"
                     android:layout_height = "70dp"
                     android:src = "@mipmap/ic_fb"/>
 
-                <!--<TextView
-                    android:layout_width = "match_parent"
+                <com.facebook.login.widget.LoginButton
+                    android:id = "@+id/login_button_fb"
+                    android:layout_width = "wrap_content"
                     android:layout_height = "wrap_content"
-                    android:gravity = "center"
-                    android:text = "Facebook"
-                    android:textColor = "@color/White"
-                    android:textSize = "18sp"/>-->
+                    android:layout_gravity = "center_horizontal"
+                    android:visibility = "gone"/>
 
                 <LinearLayout
                     android:layout_width = "match_parent"
@@ -163,7 +163,7 @@
                         android:textStyle = "bold"/>
 
                     <TextView
-                        android:id="@+id/txtv_signup"
+                        android:id = "@+id/txtv_signup"
                         android:layout_width = "wrap_content"
                         android:layout_height = "40dp"
                         android:gravity = "center"

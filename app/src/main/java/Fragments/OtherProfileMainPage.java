@@ -10,9 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.sharan.wishdrop.Chat.Chat_Activity;
-import com.example.sharan.wishdrop.OtherProfile;
-import com.example.sharan.wishdrop.R;
+import com.ameba.sharan.wishdrop.Chat.Chat_Activity;
+import com.ameba.sharan.wishdrop.OtherProfile;
+import com.ameba.sharan.wishdrop.R;
 
 import java.util.ArrayList;
 

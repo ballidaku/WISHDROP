@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.example.sharan.wishdrop.R;
+import com.ameba.sharan.wishdrop.R;
 
 import Adapters.Messages_Adapter;
 

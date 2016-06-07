@@ -1,14 +1,7 @@
 package Fragments;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
-import android.renderscript.Allocation;
-import android.renderscript.Element;
-import android.renderscript.RenderScript;
-import android.renderscript.ScriptIntrinsicBlur;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -17,12 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.example.sharan.wishdrop.OtherProfile;
-import com.example.sharan.wishdrop.R;
+import com.ameba.sharan.wishdrop.R;
 
 import java.util.ArrayList;
 
-import Adapters.OtherProfile_Images_Adapter;
 import Adapters.Profile_Images_Adapter;
 import HelperClasses.MyUtil;
 

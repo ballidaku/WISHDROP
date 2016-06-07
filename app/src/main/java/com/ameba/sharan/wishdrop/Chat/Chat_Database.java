@@ -1,4 +1,4 @@
-package com.example.sharan.wishdrop.Chat;
+package com.ameba.sharan.wishdrop.Chat;
 
 /**
  Created by sharan on 23/2/16. */

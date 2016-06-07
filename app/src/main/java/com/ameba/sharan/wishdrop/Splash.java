@@ -1,10 +1,9 @@
-package com.example.sharan.wishdrop;
+package com.ameba.sharan.wishdrop;
 
 import android.content.Intent;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 
 public class Splash extends AppCompatActivity
 {

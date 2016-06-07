@@ -5,11 +5,10 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.example.sharan.wishdrop.R;
-import com.example.sharan.wishdrop.WishDetails;
+import com.ameba.sharan.wishdrop.R;
+import com.ameba.sharan.wishdrop.WishDetails;
 
 import HelperClasses.ImageViewSmoothScroll;
 import HelperClasses.StaggeredGridViewItem;

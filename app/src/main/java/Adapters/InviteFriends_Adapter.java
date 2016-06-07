@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-import com.example.sharan.wishdrop.R;
+import com.ameba.sharan.wishdrop.R;
 
 /**
  Created by sharan on 31/5/16. */

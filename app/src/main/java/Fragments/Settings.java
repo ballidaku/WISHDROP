@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.example.sharan.wishdrop.R;
+import com.ameba.sharan.wishdrop.R;
 
 /**
  A simple {@link Fragment} subclass. */

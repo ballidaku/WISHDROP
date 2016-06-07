@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package = "com.example.sharan.wishdrop"
+<manifest package = "com.ameba.sharan.wishdrop"
           xmlns:android = "http://schemas.android.com/apk/res/android">
 
     <permission
-        android:name = "com.example.sharan.wishdrop.permission.MAPS_RECEIVE"
+        android:name = "com.ameba.sharan.wishdrop.permission.MAPS_RECEIVE"
         android:protectionLevel = "signature"/>
     <permission
         android:name = "android.permission.ACCESS_FINE_LOCATION"
@@ -31,7 +31,7 @@
         android:label = "@string/app_name"
         android:supportsRtl = "true"
         android:theme = "@style/AppTheme.NoActionBar">
-        <activity android:name = ".Splash">
+        <activity android:name = "com.ameba.sharan.wishdrop.Splash">
             <intent-filter>
                 <action android:name = "android.intent.action.MAIN"/>
 
@@ -39,17 +39,27 @@
             </intent-filter>
         </activity>
         <activity
-            android:name = ".Login"
+            android:name = "com.ameba.sharan.wishdrop.Login"
             android:windowSoftInputMode = "stateHidden">
         </activity>
         <activity
-            android:name = ".SignUp"
+            android:name = "com.ameba.sharan.wishdrop.SignUp"
             android:windowSoftInputMode = "stateHidden">
         </activity>
-        <activity android:name = ".MainActivity">
+        <activity android:name = "com.ameba.sharan.wishdrop.MainActivity">
         </activity>
-        <activity android:name = ".WishDetails">
+        <activity android:name = "com.ameba.sharan.wishdrop.WishDetails">
         </activity>
+
+        <activity android:name = "com.ameba.sharan.wishdrop.OtherProfile">
+        </activity>
+
+        <activity android:name = "com.ameba.sharan.wishdrop.Chat.Chat_Activity">
+        </activity>
+
+        <activity android:name = "com.ameba.sharan.wishdrop.AddWish">
+        </activity>
+
 
         <uses-library
             android:name = "com.google.android.maps"
@@ -62,12 +72,19 @@
             android:name = "com.google.android.gms.version"
             android:value = "@integer/google_play_services_version"/>
 
-        <activity android:name = ".OtherProfile">
-        </activity>
-        <activity android:name = ".Chat.Chat_Activity">
-        </activity>
-        <activity android:name = ".AddWish">
-        </activity>
+        <!--Facebook-->
+
+        <meta-data android:name = "com.facebook.sdk.ApplicationId"
+                   android:value = "@string/facebook_app_id"/>
+
+
+        <activity android:name="com.facebook.FacebookActivity"
+                  android:configChanges=
+                      "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+                  android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                  android:label="@string/app_name" />
+
+
     </application>
 
 </manifest>

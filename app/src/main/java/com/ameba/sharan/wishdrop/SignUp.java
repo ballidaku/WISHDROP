@@ -1,22 +1,20 @@
-package com.example.sharan.wishdrop;
+package com.ameba.sharan.wishdrop;
 
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
 
-public class Login extends AppCompatActivity implements View.OnClickListener
+public class SignUp extends AppCompatActivity implements View.OnClickListener
 {
-
     Context con;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_sign_up);
 
         con = this;
 
@@ -26,8 +24,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener
     private void setUpIds()
     {
         findViewById(R.id.txtv_signup).setOnClickListener(this);
-        findViewById(R.id.txtv_sign_in).setOnClickListener(this);
-
+        findViewById(R.id.txtv_signin).setOnClickListener(this);
     }
 
     @Override
@@ -37,16 +34,17 @@ public class Login extends AppCompatActivity implements View.OnClickListener
         {
             case R.id.txtv_signup:
 
-                startActivity(new Intent(con, SignUp.class));
+                startActivity(new Intent(con, MainActivity.class));
 
                 break;
 
-            case R.id.txtv_sign_in:
+            case R.id.txtv_signin:
 
-                startActivity(new Intent(con, MainActivity.class));
+                startActivity(new Intent(con, Login.class));
 
                 break;
 
         }
     }
+
 }

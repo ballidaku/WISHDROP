@@ -7,9 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-import com.example.sharan.wishdrop.R;
+import com.ameba.sharan.wishdrop.R;
 
-import com.example.sharan.wishdrop.Chat.Chat_Activity;
+import com.ameba.sharan.wishdrop.Chat.Chat_Activity;
 
 /**
  Created by sharan on 27/5/16. */

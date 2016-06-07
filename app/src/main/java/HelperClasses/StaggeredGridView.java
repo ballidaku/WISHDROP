@@ -17,7 +17,7 @@ import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
-import com.example.sharan.wishdrop.R;
+import com.ameba.sharan.wishdrop.R;
 
 public class StaggeredGridView extends ScrollView{
 

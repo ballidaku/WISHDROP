@@ -1,4 +1,4 @@
-package com.example.sharan.wishdrop;
+package com.ameba.sharan.wishdrop;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -12,7 +12,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import Fragments.Friends;
-import Fragments.Home;
 import Fragments.OtherProfileMainPage;
 import Fragments.WishList;
 

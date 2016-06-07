@@ -1,4 +1,4 @@
-package com.example.sharan.wishdrop.Chat;
+package com.ameba.sharan.wishdrop.Chat;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.sharan.wishdrop.R;
+import com.ameba.sharan.wishdrop.R;
 
 public class Chat_Activity extends AppCompatActivity implements View.OnClickListener
 {
